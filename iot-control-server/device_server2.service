@@ -1,0 +1,20 @@
+[Unit]
+Description=Device Control Server (LED/Buzzer/CDS/Segment)
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/jcb6477/server
+ExecStart=/home/jcb6477/server/device_server
+PIDFile=/tmp/device_server.pid
+Restart=on-failure
+RestartSec=3
+DeviceAllow=/dev/mem rw
+DeviceAllow=/dev/gpiomem rw
+RestartSec=3
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
