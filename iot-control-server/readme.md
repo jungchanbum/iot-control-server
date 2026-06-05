@@ -114,12 +114,12 @@ scp pi@<파이IP>:/usr/lib/libwiringPi.so  /usr/aarch64-linux-gnu/lib/
 
 ```bash
 chmod +x Build.sh
-./Build.sh <user> <host>
+sudo ./Build.sh <user> <host>
 ```
 
 예시:
 ```bash
-./Build.sh jcb6477 172.20.27.219
+sudo ./Build.sh jcb6477 172.20.27.219
 ```
 
 실행하면 순서대로:
@@ -133,7 +133,7 @@ chmod +x Build.sh
 ### Clean (로컬 + 파이 전체 삭제)
 
 ```bash
-./Build.sh jcb6477 172.20.27.219 clean
+sudo ./Build.sh jcb6477 172.20.27.219 clean
 ```
 
 ---
